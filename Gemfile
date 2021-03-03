@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'http'
 gem 'rack-cors'
 gem 'jb'
+gem 'geocoder', '~> 1.6', '>= 1.6.5'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
