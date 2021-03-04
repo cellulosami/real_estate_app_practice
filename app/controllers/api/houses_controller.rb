@@ -13,8 +13,8 @@ class Api::HousesController < ApplicationController
     )
     if @house.address
       @coordinates = Geocoder.coordinates(@house.address)
-      @house.latitude = @coordinates[0]
-      @house.longitude = @coordinates[1]
+      @house.latitude = @coordinates[0] || nil
+      @house.longitude = @coordinates[1] || nil
     end
     @house.save
     render 'show.json.jb'
