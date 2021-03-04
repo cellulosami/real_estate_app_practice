@@ -1,0 +1,4 @@
+{
+  latitude: @house.latitude,
+  longitude: @house.longitude
+}
