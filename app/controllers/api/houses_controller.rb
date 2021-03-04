@@ -1,11 +1,22 @@
 class Api::HousesController < ApplicationController
   def create
     @house = House.new(
-      address: params[:address] || "no address provided"
+      address: params[:address] || nil,
+      description: params[:description] || nil,
+      year_built: params[:year_built] || nil,
+      square_feet: params[:square_feet] || nil,
+      bedrooms: params[:bedrooms] || nil,
+      bathrooms: params[:bathrooms] || nil,
+      floors: params[:floors] || nil,
+      availability: params[:availability] || nil,
+      price: params[:price] || nil
     )
-    @coordinates = Geocoder.coordinates(@house.address)
-    @house.latitude = @coordinates[0]
-    @house.longitude = @coordinates[1]
+    if @house.address
+      @coordinates = Geocoder.coordinates(@house.address)
+      @house.latitude = @coordinates[0]
+      @house.longitude = @coordinates[1]
+    end
+    @house.save
     render 'show.json.jb'
   end
 end
