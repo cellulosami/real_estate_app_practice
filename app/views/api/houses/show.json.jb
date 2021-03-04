@@ -1,4 +1,2 @@
-{
-  latitude: @house.latitude,
-  longitude: @house.longitude
-}
+#render partial: "houses.json.jb", locals: {house: @house}
+@house

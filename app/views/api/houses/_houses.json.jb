@@ -1,0 +1,13 @@
+{
+  id: @house.id,
+  description: @house.description,
+  year_built: @house.year_built,
+  square_feet: @house.square_feet,
+  bedrooms: @house.bedrooms,
+  bathrooms: @house.bathrooms,
+  floors: @house.floors,
+  availability: @house.availability,
+  price: @house.price,
+  latitude: @house.latitude,
+  longitude: @house.longitude
+}
